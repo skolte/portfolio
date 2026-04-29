@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import SearchModal from './SearchModal'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -32,6 +33,7 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6">
+          <SearchModal />
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
