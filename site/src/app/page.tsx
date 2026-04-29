@@ -10,87 +10,72 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-20 pb-24">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-16">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-medium mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
-            Senior Director of Technology and AI at Pediatric Brain Tumor Foundation
+            Senior Director of Technology and AI
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
-            AI Systems Builder.{' '}
-            <span className="text-indigo-600">Healthcare & Compliance Expert.</span>{' '}
-            Nonprofit Technology Leader.
+          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight mb-3">
+            AI Systems Builder & Compliance Expert
           </h1>
-          <p className="text-xl text-slate-600 leading-relaxed mb-8 max-w-2xl">
-            20+ years building production AI and mission-critical systems for regulated industries: healthcare, defense, insurance, nonprofits. Specialize in multi-agent agentic systems, compliance architecture, and technology that directly serves people in high-stakes moments.
+          <p className="text-base text-slate-600 leading-relaxed mb-6 max-w-2xl">
+            20+ years building production AI and mission-critical systems for regulated industries. Specialist in multi-agent orchestration, healthcare compliance (HIPAA), and defense (FedRAMP).
           </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/projects" className="btn-primary">
-              View Projects <ArrowRight size={16} />
+          <div className="flex flex-wrap gap-2">
+            <Link href="/skills" className="btn-primary text-sm">
+              Skills & Expertise <ArrowRight size={14} />
             </Link>
-            <Link href="/teaching" className="btn-secondary">
-              Teaching & Talks
+            <Link href="/experience" className="btn-secondary text-sm">
+              Experience
             </Link>
-            <a
-              href="https://github.com/skolte"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary"
-            >
-              <Github size={16} /> GitHub
-            </a>
+            <Link href="/projects" className="btn-secondary text-sm">
+              Projects
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* What I Work On */}
+      {/* Core Skills */}
       <section className="border-y border-slate-200 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex gap-4">
-            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600">
-              <Code2 size={20} />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+          <h2 className="text-2xl font-bold text-slate-900 mb-8">What I Build</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex gap-3">
+              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600">
+                <Code2 size={18} />
+              </div>
+              <div>
+                <h3 className="text-slate-900 font-semibold mb-1">Agentic AI & Multi-Agent Systems</h3>
+                <p className="text-slate-600 text-sm">LangGraph, LangChain, cost tracking, observability, human-in-the-loop validation</p>
+              </div>
             </div>
-            <div>
-              <h2 className="text-slate-900 font-semibold mb-2">Agentic AI & Orchestration</h2>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Multi-agent systems using LangGraph. Real-world constraints: state management, observability, failure handling, cost tracking, human-in-the-loop validation.
-              </p>
+            <div className="flex gap-3">
+              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600">
+                <BookOpen size={18} />
+              </div>
+              <div>
+                <h3 className="text-slate-900 font-semibold mb-1">Healthcare Compliance & Data</h3>
+                <p className="text-slate-600 text-sm">HIPAA, FHIR, EHR, PII redaction, compliance middleware, audit logging</p>
+              </div>
             </div>
-          </div>
-          <div className="flex gap-4">
-            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600">
-              <BookOpen size={20} />
-            </div>
-            <div>
-              <h2 className="text-slate-900 font-semibold mb-2">Healthcare & Compliance</h2>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                HIPAA-aligned architecture, PII redaction before LLM calls, audit logging, governance middleware. Built systems handling FHIR, EHR, HL7, and clinical data.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-4">
-            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-rose-50 flex items-center justify-center text-rose-600">
-              <Heart size={20} />
-            </div>
-            <div>
-              <h2 className="text-slate-900 font-semibold mb-2">Nonprofit Impact</h2>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Founder of CareBORN and Neev Kolte & Brave Ronil Foundation. Speaker at AWS re:Invent and CAC2. Teacher of AI to nonprofits and young people.
-              </p>
+            <div className="flex gap-3">
+              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-rose-50 flex items-center justify-center text-rose-600">
+                <Heart size={18} />
+              </div>
+              <div>
+                <h3 className="text-slate-900 font-semibold mb-1">AWS Architecture & Defense Systems</h3>
+                <p className="text-slate-600 text-sm">FedRAMP, NIST 800-53, ECS Fargate, Lambda, multi-AZ infrastructure</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Projects */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
-        <div className="flex items-center justify-between mb-10">
-          <div>
-            <h2 className="section-heading">Featured Projects</h2>
-            <p className="section-subheading !mb-0">
-              Production systems built for regulated industries
-            </p>
-          </div>
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="section-heading">Featured Projects</h2>
           <Link href="/projects" className="text-indigo-600 hover:text-indigo-700 text-sm font-medium flex items-center gap-1">
             All projects <ArrowRight size={14} />
           </Link>
@@ -127,12 +112,9 @@ export default function HomePage() {
 
       {/* GitHub Repos */}
       <section className="bg-white border-y border-slate-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="section-heading">GitHub</h2>
-              <p className="text-slate-500">Open source work and experiments</p>
-            </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="section-heading">GitHub</h2>
             <a
               href="https://github.com/skolte"
               target="_blank"
@@ -174,14 +156,9 @@ export default function HomePage() {
       </section>
 
       {/* Latest Blog Posts */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
-        <div className="flex items-center justify-between mb-10">
-          <div>
-            <h2 className="section-heading">Writing</h2>
-            <p className="section-subheading !mb-0">
-              Engineering insights from building real systems
-            </p>
-          </div>
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="section-heading">Writing</h2>
           <Link href="/blog" className="text-indigo-600 hover:text-indigo-700 text-sm font-medium flex items-center gap-1">
             All posts <ArrowRight size={14} />
           </Link>
@@ -208,18 +185,18 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-24">
-        <div className="bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-2xl p-10 text-center">
-          <h2 className="text-2xl font-bold text-white mb-3">Let's Build Something That Matters</h2>
-          <p className="text-indigo-100 mb-6 max-w-xl mx-auto">
-            Whether you need a production AI system, a developer advocate, or someone to teach your team — I'd love to talk.
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
+        <div className="bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl p-8 text-center">
+          <h2 className="text-xl font-bold text-white mb-2">Let's Build Something That Matters</h2>
+          <p className="text-indigo-100 mb-5 max-w-xl mx-auto text-sm">
+            Production AI systems, compliance architecture, or teaching your team. Let's talk.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-slate-50 text-indigo-700 font-medium rounded-lg transition-colors">
-              Get in Touch <ArrowRight size={16} />
+          <div className="flex flex-wrap justify-center gap-2">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-4 py-2 bg-white hover:bg-slate-50 text-indigo-700 font-medium rounded-lg text-sm transition-colors">
+              Get in Touch <ArrowRight size={14} />
             </Link>
-            <a href="https://linkedin.com/in/sandeepkolte" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-500 hover:bg-indigo-400 text-white font-medium rounded-lg border border-indigo-400 transition-colors">
-              Connect on LinkedIn
+            <a href="https://linkedin.com/in/sandeepkolte" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500 hover:bg-indigo-400 text-white font-medium rounded-lg text-sm transition-colors">
+              LinkedIn
             </a>
           </div>
         </div>
