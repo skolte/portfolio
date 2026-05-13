@@ -1,43 +1,39 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import fs from 'fs';
+import { useEffect } from 'react';
 
 export default function InvoicePage() {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-
   useEffect(() => {
-    const loadHtml = async () => {
-      try {
-        const response = await fetch('/api/invoice-generator');
-        const html = await response.text();
-
-        if (iframeRef.current?.contentDocument) {
-          iframeRef.current.contentDocument.open();
-          iframeRef.current.contentDocument.write(html);
-          iframeRef.current.contentDocument.close();
-        }
-      } catch (error) {
-        console.error('Failed to load invoice generator:', error);
-      }
-    };
-
-    loadHtml();
+    const script = document.createElement('script');
+    script.src = '/invoice-generator.html';
+    script.type = 'text/html';
+    document.body.appendChild(script);
   }, []);
 
   return (
-    <div style={{ width: '100%', height: '100vh', margin: 0, padding: 0 }}>
-      <iframe
-        ref={iframeRef}
-        style={{
-          width: '100%',
-          height: '100%',
-          border: 'none',
-          margin: 0,
-          padding: 0,
-        }}
-        title="Invoice Generator"
-      />
-    </div>
+    <iframe
+      srcDoc={`<!DOCTYPE html><html><head><title>Loading...</title></head><body><script>
+        (async () => {
+          try {
+            const res = await fetch('/api/invoice-html');
+            if (!res.ok) throw new Error('Failed to load');
+            const html = await res.text();
+            document.open();
+            document.write(html);
+            document.close();
+          } catch(e) {
+            document.body.innerHTML = '<p>Error loading invoice generator: ' + e.message + '</p>';
+          }
+        })();
+      </script></body></html>`}
+      style={{
+        width: '100%',
+        height: '100vh',
+        border: 'none',
+        margin: 0,
+        padding: 0,
+      }}
+      title="Invoice Generator"
+    />
   );
 }
