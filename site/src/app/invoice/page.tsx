@@ -9,7 +9,7 @@ export default function InvoicePage() {
   useEffect(() => {
     const loadHtml = async () => {
       try {
-        const response = await fetch('/invoice-generator.html');
+        const response = await fetch('/api/invoice-generator');
         const html = await response.text();
 
         if (iframeRef.current?.contentDocument) {
