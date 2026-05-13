@@ -25,24 +25,28 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-        <Link href="/" className="flex flex-col leading-tight">
-          <span className="text-slate-900 font-semibold text-base">Sandeep Kolte</span>
-          <span className="text-indigo-600 text-xs font-medium">AI Systems Builder · Educator · Advocate</span>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 gap-4">
+        {/* Logo */}
+        <Link href="/" className="flex-shrink-0 font-semibold text-slate-900 text-sm">
+          Sandeep Kolte
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-6">
-          <SearchModal />
-          {navLinks.map(({ href, label }) => (
+        {/* Desktop nav - center */}
+        <div className="hidden md:flex items-center gap-4 flex-1 justify-center">
+          {navLinks.slice(0, 5).map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={pathname === href ? 'nav-link-active' : 'nav-link'}
+              className={pathname === href ? 'nav-link-active text-xs' : 'nav-link text-xs'}
             >
               {label}
             </Link>
           ))}
+        </div>
+
+        {/* Desktop right side */}
+        <div className="hidden md:flex items-center gap-3">
+          <SearchModal />
           <a
             href="https://github.com/skolte"
             target="_blank"
@@ -65,24 +69,25 @@ export default function Navbar() {
 
       {/* Mobile nav */}
       {open && (
-        <div className="md:hidden bg-white border-t border-slate-200 px-4 py-4 flex flex-col gap-3">
+        <div className="md:hidden bg-white border-t border-slate-200 px-4 py-3 flex flex-col gap-2">
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`text-sm font-medium ${pathname === href ? 'text-indigo-600' : 'text-slate-600'}`}
+              className={`text-sm py-2 ${pathname === href ? 'text-indigo-600 font-medium' : 'text-slate-600'}`}
               onClick={() => setOpen(false)}
             >
               {label}
             </Link>
           ))}
+          <div className="border-t border-slate-200 my-1" />
           <a
             href="https://github.com/skolte"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-indigo-600 font-medium"
+            className="text-sm text-indigo-600 font-medium py-2"
           >
-            GitHub →
+            GitHub
           </a>
         </div>
       )}
