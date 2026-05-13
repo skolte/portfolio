@@ -1,7 +1,7 @@
 export default function InvoicePage() {
   return (
     <iframe
-      src="/api/invoice-html"
+      src="/api/invoice-html/"
       style={{
         width: '100%',
         height: '100vh',
