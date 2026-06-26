@@ -9,6 +9,23 @@ export interface ExperienceRole {
 
 export const experienceRoles: ExperienceRole[] = [
   {
+    title: 'AI Product Builder',
+    company: 'LegalZoom',
+    period: 'Jan 2026 – Present',
+    description: 'Building AI-native internal tools that automate complex legal and marketing workflows. Full-stack engineer designing and shipping end-to-end applications using Claude API, React, Node.js, and modern web tooling.',
+    highlights: [
+      'Architected and shipped USPTO Office Action Response Tool for trademark attorneys — reduces manual research time by automating PDF parsing, refusal classification, and AI-powered DuPont factor analysis',
+      'Designed and built Marketing Brief Builder as Step 1 of 14-step AI-native Marketing Acceleration Suite (MAS); conversational agent interface exports structured briefs to Google Docs',
+      'Built Email Review Agent automating template QA against brand standards; reduces manual review cycle for marketing team',
+      'Developed conversational AI assistant for email design iteration and brand-aware design recommendations',
+      'Designed full architecture for LZLS Trademark Intake Application covering form design, data modeling, and workflow routing',
+      'Built specimen collection tool for trademark use-based applications with automated compliance checks',
+      'Developed Figma plugin for side-by-side design version comparison, addressing design review workflow pain points',
+      'Built URL validation web application for bulk QA across web properties',
+      'Direct collaboration with attorneys, paralegals, CMO-level stakeholders, and cross-functional teams',
+    ],
+  },
+  {
     title: 'Senior Director of Technology and Artificial Intelligence',
     company: 'Pediatric Brain Tumor Foundation',
     period: 'Aug 2025 – Present',

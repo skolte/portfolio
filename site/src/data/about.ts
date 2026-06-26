@@ -6,9 +6,9 @@ export interface AboutSection {
 export const aboutHero: AboutSection = {
   title: 'About Me',
   content: [
-    'I\'m Sandeep Kolte — Senior Director of Technology and AI with 20+ years building mission-critical systems for defense, healthcare, and nonprofits.',
-    'My career has taken me from building national security platforms for the Pentagon and White House to founding a pediatric cancer support organization. Along the way, I\'ve learned that the most important thing technology can do is give humans more time and capacity to do work that actually matters.',
-    'That belief shapes everything I build and teach.',
+    'I\'m Sandeep Kolte — AI Product Builder and Full-Stack Engineer at LegalZoom, specializing in AI-native internal tools that automate complex legal and marketing workflows. I design and ship end-to-end applications using Claude API, React, Node.js, and modern web tooling.',
+    'My work spans legal tech (trademark prosecution, USPTO procedures) and marketing tech (AI-native asset creation, email automation). I work directly with attorneys, paralegals, CMO-level stakeholders, and cross-functional teams to translate business needs into production-grade software that reduces manual effort across high-value workflows.',
+    'My broader career has taken me from building national security platforms for the Pentagon and White House to founding CareBORN, a HIPAA-compliant platform for pediatric cancer family support. Everything I build is driven by one belief: technology should give humans more time and capacity to do work that actually matters.',
   ],
 }
 

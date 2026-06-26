@@ -14,13 +14,13 @@ export default function HomePage() {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-medium mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
-            Senior Director of Technology and AI
+            AI Product Builder at LegalZoom
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight mb-3">
-            AI Systems Builder & Compliance Expert
+            Full-Stack AI Engineer & Legal Tech Specialist
           </h1>
           <p className="text-base text-slate-600 leading-relaxed mb-6 max-w-2xl">
-            20+ years building production AI and mission-critical systems for regulated industries. Specialist in multi-agent orchestration, healthcare compliance (HIPAA), and defense (FedRAMP).
+            Building AI-native internal tools that automate complex legal and marketing workflows. Full-stack engineer specializing in Claude API, trademark prosecution automation, and E2E marketing workflows.
           </p>
           <div className="flex flex-wrap gap-2">
             <Link href="/skills" className="btn-primary text-sm">
@@ -46,8 +46,8 @@ export default function HomePage() {
                 <Code2 size={18} />
               </div>
               <div>
-                <h3 className="text-slate-900 font-semibold mb-1">Agentic AI & Multi-Agent Systems</h3>
-                <p className="text-slate-600 text-sm">LangGraph, LangChain, cost tracking, observability, human-in-the-loop validation</p>
+                <h3 className="text-slate-900 font-semibold mb-1">Claude API & LLM Engineering</h3>
+                <p className="text-slate-600 text-sm">Prompt engineering, conversational agents, structured outputs, multi-step workflows, cost optimization</p>
               </div>
             </div>
             <div className="flex gap-3">
@@ -55,8 +55,8 @@ export default function HomePage() {
                 <BookOpen size={18} />
               </div>
               <div>
-                <h3 className="text-slate-900 font-semibold mb-1">Healthcare Compliance & Data</h3>
-                <p className="text-slate-600 text-sm">HIPAA, FHIR, EHR, PII redaction, compliance middleware, audit logging</p>
+                <h3 className="text-slate-900 font-semibold mb-1">Legal Tech & Trademark Automation</h3>
+                <p className="text-slate-600 text-sm">USPTO procedures, DuPont analysis, Office Action automation, legal domain expertise</p>
               </div>
             </div>
             <div className="flex gap-3">
@@ -64,8 +64,8 @@ export default function HomePage() {
                 <Heart size={18} />
               </div>
               <div>
-                <h3 className="text-slate-900 font-semibold mb-1">AWS Architecture & Defense Systems</h3>
-                <p className="text-slate-600 text-sm">FedRAMP, NIST 800-53, ECS Fargate, Lambda, multi-AZ infrastructure</p>
+                <h3 className="text-slate-900 font-semibold mb-1">AI-Native Marketing Workflows</h3>
+                <p className="text-slate-600 text-sm">Brief automation, email QA agents, design iteration, E2E asset creation pipelines</p>
               </div>
             </div>
           </div>
